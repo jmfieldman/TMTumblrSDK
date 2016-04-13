@@ -94,8 +94,6 @@ typedef void (^TMAPICallback)(id, NSError *error);
  */
 - (void)sendRequest:(JXHTTPOperation *)request queue:(NSOperationQueue *)queue callback:(TMAPICallback)callback;
 
-#ifdef __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__
-
 /** @name Authentication */
 
 /**
@@ -121,8 +119,6 @@ typedef void (^TMAPICallback)(id, NSError *error);
  This method is the last part of the authentication flow started by calling `authenticate:callback:`
  */
 - (BOOL)handleOpenURL:(NSURL *)url;
-
-#endif
 
 /**
  Authenticate via xAuth. Please note that xAuth access [must be specifically requested](http://www.tumblr.com/oauth/apps) 
